@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.devtools.ksp")
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 android {
@@ -69,17 +70,17 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // ViewModel
-    implementation (libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     // Koin for dependency injection
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
 
-    implementation (libs.androidx.navigation.compose)
+    implementation(libs.androidx.navigation.compose)
 
     implementation(libs.androidx.room.runtime)
-  //  annotationProcessor("androidx.room:room-compiler:2.6.1")
-    // To use Kotlin Symbol Processing (KSP)
     ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
 
+    implementation(libs.kotlinx.serialization.json)
 }
