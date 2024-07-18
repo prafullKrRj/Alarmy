@@ -9,4 +9,7 @@ sealed interface Routes {
 
     @Serializable
     data object AddAlarmScreen : Routes
+
+    @Serializable
+    data object SelectRingtoneScreen : Routes
 }

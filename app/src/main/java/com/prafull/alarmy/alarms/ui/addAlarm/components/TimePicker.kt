@@ -33,7 +33,8 @@ fun AlarmTimePicker(viewModel: AlarmsViewModel) {
     Row(
         Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(16.dp)
+            .padding(bottom = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {

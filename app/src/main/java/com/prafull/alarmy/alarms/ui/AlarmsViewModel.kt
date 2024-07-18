@@ -13,7 +13,9 @@ import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class AlarmsViewModel : ViewModel(), KoinComponent {
+class AlarmsViewModel(
+    private val alarmId: String = ""
+) : ViewModel(), KoinComponent {
     private val repository by inject<AlarmsRepository>()
     private val _alarms = repository.getAlarms()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
