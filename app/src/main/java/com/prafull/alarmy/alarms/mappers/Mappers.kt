@@ -5,18 +5,24 @@ import com.prafull.alarmy.alarms.domain.AlarmItem
 
 fun AlarmItem.toAlarmEntity(): AlarmsEntity = AlarmsEntity(
     uid = uid,
-    time = time,
+    hours = hours,
+    minutes = minutes,
     message = message,
     enabled = enabled,
     repeatMode = repeatMode,
-    customDays = customDays
+    customDays = customDays,
+    amPm = amPm,
+    fullHour = fullHour
 )
 
 fun AlarmsEntity.toAlarmItem(): AlarmItem = AlarmItem(
     uid = uid,
-    time = time,
+    hours = hours,
+    minutes = minutes,
     message = message,
     enabled = enabled,
     repeatMode = repeatMode,
-    customDays = customDays
+    customDays = customDays,
+    amPm = amPm,
+    fullHour = fullHour
 )

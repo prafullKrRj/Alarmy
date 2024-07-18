@@ -8,4 +8,5 @@ interface AlarmsRepository {
     fun getAlarms(): Flow<List<AlarmItem>>
     suspend fun deleteAlarm(alarm: AlarmItem)
     suspend fun toggleAlarm(alarmId: String, boolean: Boolean)
+    suspend fun deleteAlarms(toList: List<String>)
 }

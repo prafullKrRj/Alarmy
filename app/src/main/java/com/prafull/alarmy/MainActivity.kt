@@ -9,8 +9,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.prafull.alarmy.alarms.ui.AddAlarmScreen
-import com.prafull.alarmy.alarms.ui.AlarmsScreen
+import com.prafull.alarmy.alarms.ui.addAlarm.AddAlarmScreen
+import com.prafull.alarmy.alarms.ui.alarms.AlarmsScreen
 import com.prafull.alarmy.ui.theme.AlarmyTheme
 import org.koin.androidx.compose.getViewModel
 

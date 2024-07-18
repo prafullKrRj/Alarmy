@@ -6,7 +6,7 @@ import androidx.room.TypeConverters
 
 @Database(entities = [AlarmsEntity::class], version = 1)
 @TypeConverters(
-    LocalDateTimeConverter::class,
+    AmPmConverter::class,
     DayOfWeekListConverter::class,
     RepeatModeConverter::class
 )

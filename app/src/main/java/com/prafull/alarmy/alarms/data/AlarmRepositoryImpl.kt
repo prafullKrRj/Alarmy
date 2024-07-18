@@ -13,7 +13,7 @@ import org.koin.core.component.inject
 class AlarmRepositoryImpl : AlarmsRepository, KoinComponent {
     private val alarmsDao by inject<AlarmsDao>()
     override suspend fun insertAlarm(alarm: AlarmItem) {
-        alarmsDao.insertAlarm(alarm.toAlarmEntity())
+        alarmsDao.insertAlarmIfNotExists(alarm.toAlarmEntity())
     }
 
     override fun getAlarms(): Flow<List<AlarmItem>> {
@@ -28,5 +28,9 @@ class AlarmRepositoryImpl : AlarmsRepository, KoinComponent {
 
     override suspend fun toggleAlarm(alarmId: String, boolean: Boolean) {
         alarmsDao.toggleAlarm(alarmId, boolean)
+    }
+
+    override suspend fun deleteAlarms(toList: List<String>) {
+        alarmsDao.deleteAlarms(toList)
     }
 }

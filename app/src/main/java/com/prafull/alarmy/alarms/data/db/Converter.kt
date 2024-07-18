@@ -1,24 +1,10 @@
 package com.prafull.alarmy.alarms.data.db
 
 import androidx.room.TypeConverter
+import com.prafull.alarmy.alarms.domain.AmPm
 import com.prafull.alarmy.alarms.domain.RepeatMode
 import java.time.DayOfWeek
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
-class LocalDateTimeConverter {
-    @TypeConverter
-    fun fromLocalDateTime(localDateTime: LocalDateTime?): String? {
-        return localDateTime?.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
-    }
-
-    @TypeConverter
-    fun toLocalDateTime(dateTimeString: String?): LocalDateTime? {
-        return dateTimeString?.let {
-            LocalDateTime.parse(it, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
-        }
-    }
-}
 
 class DayOfWeekListConverter {
 
@@ -48,5 +34,17 @@ class RepeatModeConverter {
     @TypeConverter
     fun toRepeatMode(repeatModeString: String?): RepeatMode? {
         return repeatModeString?.let { RepeatMode.valueOf(it) }
+    }
+}
+
+class AmPmConverter {
+    @TypeConverter
+    fun fromAmPm(amPm: AmPm?): String? {
+        return amPm?.name
+    }
+
+    @TypeConverter
+    fun toAmPm(string: String?): AmPm? {
+        return string?.let { AmPm.valueOf(it) }
     }
 }
