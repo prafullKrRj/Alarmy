@@ -12,4 +12,7 @@ sealed interface Routes {
 
     @Serializable
     data object SelectRingtoneScreen : Routes
+
+    @Serializable
+    data object AddClockScreen : Routes
 }

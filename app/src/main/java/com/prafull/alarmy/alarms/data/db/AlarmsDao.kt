@@ -36,6 +36,6 @@ interface AlarmsDao {
     @Query("UPDATE alarmsentity SET enabled = :enabled WHERE uid = :alarmId")
     suspend fun toggleAlarm(alarmId: String, enabled: Boolean)
 
-    @Query("DELETE FROM alarmsentity WHERE uid IN (:toList)")
-    suspend fun deleteAlarms(toList: List<String>)
+    @Query("DELETE FROM alarmsentity WHERE uid IN (:alarms)")
+    suspend fun deleteAlarms(alarms: List<String>)
 }
