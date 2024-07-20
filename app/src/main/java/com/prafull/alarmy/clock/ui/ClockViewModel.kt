@@ -2,6 +2,7 @@ package com.prafull.alarmy.clock.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.prafull.alarmy.clock.data.db.CityTime
 import com.prafull.alarmy.clock.domain.ClockRepository
 import com.prafull.alarmy.clock.domain.toCityModel
 import kotlinx.coroutines.flow.SharingStarted
@@ -22,6 +23,12 @@ class ClockViewModel : ViewModel(), KoinComponent {
     fun deleteCities(cities: List<String>) {
         viewModelScope.launch {
             repository.deleteSelected(cities)
+        }
+    }
+
+    fun addCity(cityModel: CityTime) {
+        viewModelScope.launch {
+            repository.insertCityTime(cityModel)
         }
     }
 }

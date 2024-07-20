@@ -10,5 +10,6 @@ data class CityTime(
     val uid: String = UUID.randomUUID().toString(),
     val city: String,
     val country: String,
-    val timeZone: String
+    val timeZone: String,
+    val gmtZone: String
 )

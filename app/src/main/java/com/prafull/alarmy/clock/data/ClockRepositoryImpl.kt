@@ -25,5 +25,4 @@ class ClockRepositoryImpl : KoinComponent, ClockRepository {
     override suspend fun deleteSelected(cities: List<String>) {
         clockDao.deleteSelected(cities)
     }
-
 }

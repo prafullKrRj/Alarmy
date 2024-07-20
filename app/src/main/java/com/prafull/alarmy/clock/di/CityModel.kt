@@ -7,5 +7,6 @@ data class CityModel(
     val city: String,
     val country: String,
     val timeZone: String,
+    val gmtZone: String,
     val time: LocalDateTime? = null
 )

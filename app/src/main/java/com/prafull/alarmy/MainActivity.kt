@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.pager.HorizontalPager
@@ -13,9 +12,7 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
@@ -35,6 +32,7 @@ import com.prafull.alarmy.alarms.ui.addAlarm.AddAlarmScreen
 import com.prafull.alarmy.alarms.ui.addAlarm.SelectRingtone
 import com.prafull.alarmy.alarms.ui.alarms.AlarmsScreen
 import com.prafull.alarmy.alarms.ui.alarms.TopIcon
+import com.prafull.alarmy.clock.ui.AddCityScreen
 import com.prafull.alarmy.clock.ui.ClockScreen
 import com.prafull.alarmy.pomodoro.PomodoroScreen
 import com.prafull.alarmy.stopwatch.StopwatchScreen
@@ -66,13 +64,8 @@ class MainActivity : ComponentActivity() {
                             navController = navController
                         )
                     }
-                    composable<Routes.AddClockScreen> {
-                        Box(
-                            modifier = Modifier.fillMaxSize(),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text("Add Clock Screen")
-                        }
+                    composable<Routes.AddCityScreen> {
+                        AddCityScreen(navController, getViewModel())
                     }
                 }
             }
@@ -84,7 +77,7 @@ class MainActivity : ComponentActivity() {
 fun MainApp(navController: NavController) {
     val pagerState = rememberPagerState(
         pageCount = { 4 },
-        initialPage = 1
+        initialPage = 0
     )
     Scaffold(
         modifier = Modifier.fillMaxSize(),
