@@ -1,4 +1,4 @@
-package com.prafull.alarmy.alarms.mappers
+package com.prafull.alarmy.alarms.domain.mappers
 
 import com.prafull.alarmy.alarms.data.db.AlarmsEntity
 import com.prafull.alarmy.alarms.domain.AlarmItem

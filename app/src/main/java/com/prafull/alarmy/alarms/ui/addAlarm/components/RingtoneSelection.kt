@@ -13,7 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.prafull.alarmy.Routes
+import com.prafull.alarmy.ui.Routes
 import com.prafull.alarmy.alarms.ui.AlarmsViewModel
 
 @Composable

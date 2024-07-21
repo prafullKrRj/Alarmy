@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.prafull.alarmy.clock.data.cityTimes
 import com.prafull.alarmy.clock.data.db.CityTime
-import com.prafull.alarmy.goBackStack
+import com.prafull.alarmy.ui.goBackStack
 
 @Composable
 fun AddCityScreen(navController: NavController, viewModel: ClockViewModel) {

@@ -19,7 +19,7 @@ import com.prafull.alarmy.alarms.ui.addAlarm.components.AlarmLabel
 import com.prafull.alarmy.alarms.ui.addAlarm.components.AlarmTimePicker
 import com.prafull.alarmy.alarms.ui.addAlarm.components.RepeatSelection
 import com.prafull.alarmy.alarms.ui.addAlarm.components.RingtoneSelection
-import com.prafull.alarmy.goBackStack
+import com.prafull.alarmy.ui.goBackStack
 
 
 @Composable

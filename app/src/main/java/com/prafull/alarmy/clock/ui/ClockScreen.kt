@@ -26,7 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.prafull.alarmy.Routes
+import com.prafull.alarmy.ui.Routes
 import com.prafull.alarmy.clock.di.CityModel
 import com.prafull.alarmy.clock.ui.components.ClockText
 import com.prafull.alarmy.commons.AddAndDeleteBottomBar

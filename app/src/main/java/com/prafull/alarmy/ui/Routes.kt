@@ -1,4 +1,4 @@
-package com.prafull.alarmy
+package com.prafull.alarmy.ui
 
 import kotlinx.serialization.Serializable
 

@@ -2,9 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
-
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <application
         android:name=".AlarmyApp"
         android:allowBackup="true"
@@ -17,7 +22,7 @@
         android:theme="@style/Theme.Alarmy"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Alarmy">
             <intent-filter>
@@ -26,8 +31,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <receiver android:name=".reference.AlarmReceiver" /> -->
-
+        <activity android:name=".alarms.ui.AlarmActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Alarmy" />
+        <receiver android:name=".alarms.data.AlarmReceiver" />
+        <service android:name=".pomodoro.PomodoroService"
+            android:foregroundServiceType="specialUse"/>
     </application>
 
 </manifest>

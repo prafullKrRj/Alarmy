@@ -26,9 +26,9 @@ class AlarmsViewModel(
         newAlarm = AlarmItem()
     }
 
-    fun toggleAlarm(alarmId: String, boolean: Boolean) {
+    fun toggleAlarm(alarm: AlarmItem, boolean: Boolean) {
         viewModelScope.launch {
-            repository.toggleAlarm(alarmId, boolean)
+            repository.toggleAlarm(boolean, alarm)
         }
     }
 
@@ -41,7 +41,7 @@ class AlarmsViewModel(
         }
     }
 
-    fun deleteAlarms(toList: List<String>) {
+    fun deleteAlarms(toList: List<AlarmItem>) {
         viewModelScope.launch {
             repository.deleteAlarms(toList)
         }

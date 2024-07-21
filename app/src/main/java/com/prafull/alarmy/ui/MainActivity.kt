@@ -1,4 +1,4 @@
-package com.prafull.alarmy
+package com.prafull.alarmy.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                     startDestination = Routes.AlarmScreen
                 ) {
                     composable<Routes.AlarmScreen> {
-                        MainApp(navController = navController)
+                        MainApp(navController = navController, this@MainActivity)
                     }
                     composable<Routes.AddAlarmScreen> {
                         AddAlarmScreen(getViewModel(), navController)
@@ -74,10 +74,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainApp(navController: NavController) {
+fun MainApp(navController: NavController, activity: ComponentActivity) {
     val pagerState = rememberPagerState(
         pageCount = { 4 },
-        initialPage = 0
+        initialPage = 2
     )
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -100,7 +100,7 @@ fun MainApp(navController: NavController) {
                 }
 
                 2 -> {
-                    PomodoroScreen()
+                    PomodoroScreen(activity, getViewModel())
                 }
 
                 3 -> {

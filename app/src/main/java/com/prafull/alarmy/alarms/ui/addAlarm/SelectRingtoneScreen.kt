@@ -19,7 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.prafull.alarmy.alarms.ui.AlarmsViewModel
-import com.prafull.alarmy.goBackStack
+import com.prafull.alarmy.ui.goBackStack
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
