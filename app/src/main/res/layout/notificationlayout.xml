@@ -42,9 +42,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_timer"
-        android:layout_toRightOf="@id/btn_pause"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/btn_pause"
         android:text="Stop"
         android:visibility="gone" />
 
@@ -53,9 +53,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_timer"
-        android:layout_toRightOf="@id/btn_stop"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/btn_stop"
         android:text="Reset"
         android:visibility="gone" />
 </RelativeLayout>

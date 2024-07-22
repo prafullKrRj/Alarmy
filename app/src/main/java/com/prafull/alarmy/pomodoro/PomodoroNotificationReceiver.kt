@@ -7,7 +7,7 @@ import com.prafull.alarmy.pomodoro.PomodoroService.Actions
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class PomodoroNotificationReceiver: BroadcastReceiver(), KoinComponent {
+class PomodoroNotificationReceiver : BroadcastReceiver(), KoinComponent {
     private val service: PomodoroService by inject()
     override fun onReceive(context: Context?, intent: Intent?) {
 
@@ -15,6 +15,7 @@ class PomodoroNotificationReceiver: BroadcastReceiver(), KoinComponent {
             Actions.START.name -> {
                 service.startTimer(intent.getLongExtra("time", 1500L))
             }
+
             Actions.STOP.name -> service.stopTimer()
             Actions.PAUSE.name -> service.pauseTimer()
             Actions.CONTINUE.name -> service.continueTimer()

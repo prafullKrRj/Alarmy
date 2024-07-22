@@ -9,7 +9,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:name=".AlarmyApp"
         android:allowBackup="true"
@@ -31,12 +32,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".alarms.ui.AlarmActivity"
+        <activity
+            android:name=".alarms.ui.AlarmActivity"
             android:exported="true"
             android:theme="@style/Theme.Alarmy" />
+
         <receiver android:name=".alarms.data.AlarmReceiver" />
-        <service android:name=".pomodoro.PomodoroService"
-            android:foregroundServiceType="specialUse"/>
+        <service
+            android:name=".pomodoro.PomodoroService"
+            android:foregroundServiceType="specialUse" />
     </application>
 
 </manifest>

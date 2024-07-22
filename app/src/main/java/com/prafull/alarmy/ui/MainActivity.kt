@@ -40,7 +40,6 @@ import com.prafull.alarmy.ui.theme.AlarmyTheme
 import org.koin.androidx.compose.getViewModel
 
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -109,6 +108,7 @@ fun MainApp(navController: NavController, activity: ComponentActivity) {
             }
         }
     }
+
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

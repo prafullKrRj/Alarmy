@@ -27,11 +27,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.prafull.alarmy.ui.Routes
 import com.prafull.alarmy.alarms.domain.AlarmItem
 import com.prafull.alarmy.alarms.ui.AlarmsViewModel
 import com.prafull.alarmy.alarms.ui.alarms.components.AlarmItem
 import com.prafull.alarmy.commons.AddAndDeleteBottomBar
+import com.prafull.alarmy.ui.Routes
 
 @Composable
 fun AlarmsScreen(viewModel: AlarmsViewModel, navController: NavController) {
